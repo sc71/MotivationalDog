@@ -2,9 +2,11 @@ package com.example.motivationaldog;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         buttonGenerate = findViewById(R.id.button_main_generate);
         textViewQuote = findViewById(R.id.textview_main_quote);
         imageViewDog = findViewById(R.id.imageview_main_dog);
+        textViewQuote.setMovementMethod(new ScrollingMovementMethod());
     }
 
     private void setListeners() {
@@ -111,6 +114,9 @@ public class MainActivity extends AppCompatActivity {
             textToShow = textToShow.replace("<br>", "");
             textToShow = textToShow.replace("</br>", "");
         }
+        if((textToShow.contains("<br >") || (textToShow.contains("<br />")))){
+            textToShow = textToShow.replace("<br />", "");
+        }
         if((textToShow.contains("<ul>") || (textToShow.contains("</ul>")))){
             textToShow = textToShow.replace("<ul>", "");
             textToShow = textToShow.replace("</ul>", "");
@@ -118,6 +124,9 @@ public class MainActivity extends AppCompatActivity {
         if((textToShow.contains("<li>") || (textToShow.contains("</li>")))){
             textToShow = textToShow.replace("<li>", "");
             textToShow = textToShow.replace("</li>", "");
+        }
+        if(textToShow.contains("&#8243;")){
+            textToShow = textToShow.replace("&#8243;", "\"");
         }
         return textToShow;
 

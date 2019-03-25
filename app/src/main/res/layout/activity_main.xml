@@ -18,46 +18,23 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/shibe_start" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/imageview_main_dog"
-        tools:layout_editor_absoluteX="8dp">
-
-        <ScrollView
-            android:id="@+id/scrollView2"
-            android:layout_width="395dp"
-            android:layout_height="153dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageview_main_dog">
-
-            <TextView
-                android:id="@+id/textview_main_quote"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="32dp"
-                android:fontFamily="serif"
-                android:text="Welcome to Motivational Dog. To start, press generate."
-                android:textAlignment="center"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageview_main_dog" />
-        </ScrollView>
-
-    </LinearLayout>
+    <TextView
+        android:id="@+id/textview_main_quote"
+        android:layout_width="0dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="serif"
+        android:paddingBottom="0dp"
+        android:scrollbars="vertical"
+        android:text="@string/start_message"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageview_main_dog" />
 
     <Button
         android:id="@+id/button_main_generate"
@@ -69,11 +46,12 @@
         android:layout_marginEnd="8dp"
         android:background="@android:color/holo_green_light"
         android:fontFamily="serif"
-        android:text="Generate"
+        android:text="@string/generate"
         android:textAllCaps="false"
         android:textColor="@android:color/background_dark"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/textview_main_quote" />
 
 </android.support.constraint.ConstraintLayout>

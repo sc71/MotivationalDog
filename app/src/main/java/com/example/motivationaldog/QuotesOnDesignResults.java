@@ -1,10 +1,10 @@
 package com.example.motivationaldog;
 
 public class QuotesOnDesignResults {
-    int ID;
-    String title;
-    String content;
-    String link;
+    private int ID;
+    private String title;
+    private String content;
+    private String link;
 
     public QuotesOnDesignResults(int ID, String title, String content, String link) {
         this.ID = ID;
