@@ -1,5 +1,0 @@
-<resources>
-    <string name="app_name">Motivational Dog</string>
-    <string name="generate">Generate</string>
-    <string name="start_message">Welcome to Motivational Dog. To start, press generate.</string>
-</resources>
